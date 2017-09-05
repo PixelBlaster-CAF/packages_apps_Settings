@@ -79,4 +79,18 @@
 
     </PreferenceCategory>
 
+    <!-- Incall vibration options -->
+    <PreferenceCategory
+        android:key="accessibility_incall_vibration_category"
+        android:title="@string/incall_vibration_category" >
+
+    <!-- In-call feedback -->
+        <com.blaster.support.preference.SystemSettingSwitchPreference
+            android:key="incall_feeedback_vibrate"
+            android:title="@string/incall_feeedback_vibrate_title"
+            android:defaultValue="false"
+            app:controller="com.android.settings.accessibility.IncallFeedbackPreferenceController" />
+
+    </PreferenceCategory>
+
 </PreferenceScreen>

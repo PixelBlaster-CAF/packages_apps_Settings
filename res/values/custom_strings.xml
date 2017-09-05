@@ -174,4 +174,8 @@
     <!-- Game Space -->
     <string name="game_space_title">Game Space</string>
     <string name="game_space_summary">Enhance your gaming experience</string>
+
+    <!-- In-call feedback -->
+    <string name="incall_vibration_category">In-call vibration options</string>
+    <string name="incall_feeedback_vibrate_title">Vibrate to indicate call status</string>
 </resources>
