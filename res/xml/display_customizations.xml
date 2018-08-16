@@ -42,6 +42,14 @@
             android:summary="@string/qs_show_brightness_summary"
             android:fragment="com.android.settings.custom.fragments.BrightnessSliderSettings"
             android:defaultValue="true" />
+
+        <!-- Network Traffic -->
+        <com.blaster.support.preference.SystemSettingMasterSwitchPreference
+            android:key="network_traffic_state"
+            android:title="@string/network_traffic_state_title"
+            android:summary="@string/network_traffic_state_summary"
+            android:fragment="com.android.settings.custom.fragments.NetworkTraffic"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory
