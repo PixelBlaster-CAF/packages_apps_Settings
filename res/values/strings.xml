@@ -13729,4 +13729,8 @@
     <string name="nr_sa">SA</string>
     <string name="prefer_vonr_mode_title">Enable/Disable VoNR</string>
     <string name="prefer_vonr_mode_summary">Enable or disable VoNR</string>
+    
+    <!-- Three-fingers-swipe to screenshot -->
+    <string name="three_finger_gesture">Swipe to screenshot</string>
+    <string name="three_finger_gesture_summary">Swipe down with three fingers to take a screenshot</string>
 </resources>
