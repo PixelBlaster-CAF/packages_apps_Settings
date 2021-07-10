@@ -533,4 +533,7 @@
     <string name="maintainer">Maintainer</string>
     <string name="blaster_group_title">Support Group</string>
     <string name="blaster_group_summary">https://t.me/PixelBlaster</string>
+
+    <!-- CAF Revision -->
+    <string name="caf_rev">CAF revision</string>
 </resources>
