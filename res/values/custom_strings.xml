@@ -16,5 +16,5 @@
     <string name="blaster_dashboard_summary">Explode your device</string>
 
     <!-- CAF Revision -->
-    <string name="caf_rev">CAF revision</string>
+    <string name="caf_rev">CAF Revision</string>
 </resources>
