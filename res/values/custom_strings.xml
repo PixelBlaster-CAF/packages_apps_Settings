@@ -527,5 +527,5 @@
     <string name="battery_light_reallyfull_color">Full (100) battery</string>
 
     <!-- CAF Revision -->
-    <string name="caf_rev">CAF revision</string>
+    <string name="caf_rev">CAF Revision</string>
 </resources>
