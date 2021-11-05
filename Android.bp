@@ -67,7 +67,17 @@ android_library {
         "btadva_settings_java_defaults",
     ],
 
-    srcs: ["src/**/*.java"],
+    srcs: [
+        "src/**/*.java",
+        "Explosives/src/**/*.java",
+    ],
+
+    aaptflags: ["--extra-packages com.blaster.settings",],
+
+    resource_dirs: [
+        "res",
+        "Explosives/res",
+    ],
 
     static_libs: [
         "androidx-constraintlayout_constraintlayout",

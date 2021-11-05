@@ -327,4 +327,9 @@ public class Settings extends SettingsActivity {
      * Activity for AppDashboard.
      */
     public static class AppDashboardActivity extends SettingsActivity {}
+
+    /**
+     * Activity for Explosives
+     */
+    public static class ExplosivesActivity extends SettingsActivity { /* empty */ }    
 }
