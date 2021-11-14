@@ -529,4 +529,9 @@
     <!-- CAF Revision -->
     <string name="caf_rev_system">CAF System Revision</string>
     <string name="caf_rev_vendor">CAF Vendor Revision</string>
+
+    <!-- Screen off FOD -->
+    <string name="screen_off_fod_title">Screen off FOD</string>
+    <string name="screen_off_fod_summary">Keep FOD enabled when the screen is off</string>
+
 </resources>
