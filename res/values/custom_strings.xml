@@ -541,4 +541,9 @@
      <!-- UDFPS icon accent color -->
      <string name="udfps_icon_accent_title">Apply accent color to UDFPS icon</string>
      <string name="udfps_icon_accent_summary">Apply accent color to UDFPS icon</string>
+
+    <!-- Per-app volume control -->
+    <string name="app_volume">App volume</string>
+    <string name="app_volume_title">Per-app volume control</string>
+    <string name="app_volume_summary">Allow to set different volume levels for each app</string>
 </resources>
