@@ -100,4 +100,8 @@
 
     <!-- Theme overlays -->
     <string name="theme_customization_category">Theming</string>
+    
+    <!-- PixelBlaster -->
+    <string name="blaster_version_title">PixelBlaster Version</string>
+    <string name="blaster_version_summary">More info about PixelBlaster</string>
 </resources>
