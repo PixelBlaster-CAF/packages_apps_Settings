@@ -107,6 +107,7 @@ android_library {
         "android.hardware.dumpstate-V1.1-java",
         "lottie",
         "VendorSupport-Libs",
+        "faceunlock_framework",
     ],
 
     libs: [
