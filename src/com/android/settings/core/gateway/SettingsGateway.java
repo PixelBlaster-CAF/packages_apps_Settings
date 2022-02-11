@@ -92,6 +92,7 @@ import com.android.settings.deviceinfo.PrivateVolumeForget;
 import com.android.settings.deviceinfo.PublicVolumeSettings;
 import com.android.settings.deviceinfo.StorageDashboardFragment;
 import com.android.settings.deviceinfo.aboutphone.MyDeviceInfoFragment;
+import com.android.settings.deviceinfo.firmwareversion.PixelBlasterVersion;
 import com.android.settings.deviceinfo.firmwareversion.FirmwareVersionSettings;
 import com.android.settings.deviceinfo.legal.ModuleLicensesDashboard;
 import com.android.settings.display.AutoBrightnessSettings;
@@ -351,7 +352,8 @@ public class SettingsGateway {
             MobileNetworkSettings.class.getName(),
             AppLocaleDetails.class.getName(),
             TurnScreenOnSettings.class.getName(),
-            TurnScreenOnDetails.class.getName()
+            TurnScreenOnDetails.class.getName(),
+            PixelBlasterVersion.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
