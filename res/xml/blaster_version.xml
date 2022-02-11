@@ -25,11 +25,25 @@
     android:layout="@layout/blaster_logo_layout"
     android:key="blaster_logo" />
 
+    <!-- Blaster maintainer -->
+    <Preference
+        android:key="rom_version"
+        android:title="@string/blaster_version_title"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.BlasterVersionPreferenceController"/>
+
     <!-- CAF revision -->
     <Preference
         android:key="caf_revision"
         android:title="@string/caf_rev"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.CodeAuroraForumPreferenceController"/>
+
+    <!-- Blaster maintainer -->
+    <Preference
+        android:key="maintainer"
+        android:title="@string/maintainer"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.BlasterMaintainerPreferenceController"/>
 
 </PreferenceScreen>
