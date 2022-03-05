@@ -22,12 +22,12 @@ import androidx.annotation.VisibleForTesting;
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
 
-public class CodeAuroraForumPreferenceController extends BasePreferenceController {
+public class CodeAuroraForumVendorPreferenceController extends BasePreferenceController {
 
     @VisibleForTesting
-    private static final String CAF_REV = "ro.caf.revision.tag";
+    private static final String CAF_REV_VENDOR = "ro.caf.vendor.tag";
 
-    public CodeAuroraForumPreferenceController(Context context, String preferenceKey) {
+    public CodeAuroraForumVendorPreferenceController(Context context, String preferenceKey) {
         super(context, preferenceKey);
     }
 
@@ -38,7 +38,7 @@ public class CodeAuroraForumPreferenceController extends BasePreferenceControlle
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(CAF_REV,
+        return SystemProperties.get(CAF_REV_VENDOR,
                 mContext.getString(R.string.device_info_default));
     }
 }

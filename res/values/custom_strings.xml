@@ -21,7 +21,8 @@
     <string name="blaster_group_summary">https://t.me/PixelBlaster</string>
 
     <!-- CAF Revision -->
-    <string name="caf_rev">CAF Revision</string>
+    <string name="caf_rev_system">CAF System Revision</string>
+    <string name="caf_rev_vendor">CAF Vendor Revision</string>
 
     <!-- Fullscreen gestures -->
     <string name="other_controls_title">Other controls</string>

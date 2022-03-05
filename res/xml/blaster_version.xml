@@ -34,10 +34,16 @@
 
     <!-- CAF revision -->
     <Preference
-        android:key="caf_revision"
-        android:title="@string/caf_rev"
+        android:key="caf_revision_system"
+        android:title="@string/caf_rev_system"
         settings:enableCopying="true"
-        settings:controller="com.android.settings.deviceinfo.firmwareversion.CodeAuroraForumPreferenceController"/>
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.CodeAuroraForumSystemPreferenceController"/>
+
+    <Preference
+        android:key="caf_revision_vendor"
+        android:title="@string/caf_rev_vendor"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.CodeAuroraForumVendorPreferenceController"/>
 
     <!-- Blaster maintainer -->
     <Preference
