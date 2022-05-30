@@ -81,4 +81,7 @@
     <string name="notification_sound_vib_screen_on_title">Annoying Notifications</string>
     <string name="notification_sound_vib_screen_on_summary">Play sound and vibration for notifications when screen is on</string>
 
+     <!-- AOD clock accent color -->
+     <string name="aod_clock_accent_title">Apply accent color to AOD clock</string>
+     <string name="aod_clock_accent_summary">Apply accent color to AOD clock (Requires SystemUI restart)</string>
 </resources>
