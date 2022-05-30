@@ -143,6 +143,12 @@
             settings:searchable="false"
             settings:controller="com.android.settings.gestures.ScreenOffUdfpsPreferenceController" />
 
+        <com.blaster.support.preference.SystemSettingSwitchPreference
+            android:key="udfps_icon_accent"
+            android:title="@string/udfps_icon_accent_title"
+            android:summary="@string/udfps_icon_accent_summary"
+            android:defaultValue="true" />
+
         <SwitchPreference
             android:key="ambient_display_notification"
             android:title="@string/doze_title"
