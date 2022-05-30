@@ -151,6 +151,12 @@
         android:title="@string/fingerprint_category">
 
         <com.blaster.support.preference.SystemSettingSwitchPreference
+            android:key="udfps_icon_accent"
+            android:title="@string/udfps_icon_accent_title"
+            android:summary="@string/udfps_icon_accent_summary"
+            android:defaultValue="true" />
+
+        <com.blaster.support.preference.SystemSettingSwitchPreference
             android:key="fingerprint_start_vib"
             android:title="@string/fprint_start_vib_title"
             android:summary="@string/fprint_start_vib_summary"
