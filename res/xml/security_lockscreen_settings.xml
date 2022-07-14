@@ -185,11 +185,10 @@
             android:summary="@string/keygaurd_media_art_summary"
             android:defaultValue="false" />
 
-        <com.blaster.support.preference.CustomSystemSeekBarPreference
+        <com.blaster.support.preference.SystemSettingSeekBarPreference
             android:key="lockscreen_media_blur"
             android:title="@string/lockscreen_media_blur_title"
             android:dependency="keygaurd_media_art"
-            settings:allowEditText="true"
             android:max="25"
             android:min="0"
             android:defaultValue="25"
