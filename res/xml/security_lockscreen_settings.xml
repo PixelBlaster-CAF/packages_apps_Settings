@@ -118,19 +118,6 @@
             settings:searchable="false"
             settings:controller="com.android.settings.gestures.PickupGesturePreferenceController" />
 
-        <Preference
-            android:key="gesture_screen_off_udfps_input_summary"
-            android:title="@string/ambient_display_screen_off_udfps_title"
-            android:fragment="com.android.settings.gestures.ScreenOffUdfpsSettings"
-            settings:searchable="false"
-            settings:controller="com.android.settings.gestures.ScreenOffUdfpsPreferenceController" />
-
-        <com.blaster.support.preference.SystemSettingSwitchPreference
-            android:key="udfps_icon_accent"
-            android:title="@string/udfps_icon_accent_title"
-            android:summary="@string/udfps_icon_accent_summary"
-            android:defaultValue="true" />
-
         <SwitchPreference
             android:key="ambient_display_notification"
             android:title="@string/doze_title"
@@ -160,6 +147,19 @@
             android:title="@string/fprint_error_vib_title"
             android:summary="@string/fprint_error_vib_summary"
             android:persistent="true" />
+
+        <Preference
+            android:key="gesture_screen_off_udfps_input_summary"
+            android:title="@string/ambient_display_screen_off_udfps_title"
+            android:fragment="com.android.settings.gestures.ScreenOffUdfpsSettings"
+            settings:searchable="false"
+            settings:controller="com.android.settings.gestures.ScreenOffUdfpsPreferenceController" />
+
+        <com.blaster.support.preference.SystemSettingSwitchPreference
+            android:key="udfps_icon_accent"
+            android:title="@string/udfps_icon_accent_title"
+            android:summary="@string/udfps_icon_accent_summary"
+            android:defaultValue="true" />
     </PreferenceCategory>
 
     <!-- Work profile settings are at the bottom with high order value to avoid users thinking that
