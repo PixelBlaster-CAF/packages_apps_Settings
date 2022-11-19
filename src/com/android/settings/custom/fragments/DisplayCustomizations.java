@@ -68,7 +68,9 @@ public class DisplayCustomizations extends SettingsPreferenceFragment
         if (!getResources()
                 .getBoolean(com.android.internal.R.bool.config_intrusiveBatteryLed))
         {
-                prefSet.removePreference(mBatteryLightPref);
+			if (mBatteryLightPref != null) {
+				prefSet.removePreference(mBatteryLightPref);
+			}
         }
 
         mNetworkTraffic = (SystemSettingMasterSwitchPreference)
