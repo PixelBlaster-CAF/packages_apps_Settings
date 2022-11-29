@@ -489,6 +489,9 @@
     <!-- Volume link notification -->
     <string name="volume_link_notification_title">Link ring &amp; notification volumes</string>
 
+    <!-- Volume panel haptic feedback-->
+    <string name="volume_panel_haptic_feedback_title">Vibrate on changing volume</string>
+
     <!-- Preference and settings suggestion title text for screen off UDFPS (phone) [CHAR LIMIT=60]-->
     <string name="ambient_display_screen_off_udfps_title" product="default">Long press on fingerprint sensor to unlock phone</string>
     <!-- Preference and settings suggestion title text for screen off UDFPS  (tablet) [CHAR LIMIT=60]-->
@@ -596,4 +599,7 @@
     <!-- Game Space -->
     <string name="game_space_title">Game Space</string>
     <string name="game_space_summary">Enhance your gaming experience</string>
+
+    <!-- Misc vibration -->
+    <string name="misc_vibration_category">Miscellaneous</string>
 </resources>
