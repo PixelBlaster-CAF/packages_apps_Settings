@@ -26,4 +26,10 @@
         android:title="@string/qs_show_auto_brightness_title"
         android:summary="@string/qs_show_auto_brightness_summary"
         android:defaultValue="false" />
+
+    <com.blaster.support.preference.SystemSettingSwitchPreference
+        android:key="brightness_slider_haptic_feedback"
+        android:title="@string/qs_brightness_haptic_feedback_title"
+        android:summary="@string/qs_brightness_haptic_feedback_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>

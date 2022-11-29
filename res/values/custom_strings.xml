@@ -136,6 +136,8 @@
     <string name="qs_brightness_position_bottom_summary">Show the brightness slider on the bottom of QS</string>
     <string name="qs_show_auto_brightness_title">Auto brightness icon</string>
     <string name="qs_show_auto_brightness_summary">Show an auto brightness toggle near the brightness slider</string>
+    <string name="qs_brightness_haptic_feedback_title">Haptic feedback</string>
+    <string name="qs_brightness_haptic_feedback_summary">Haptic feedback when adjusting brightness (Requires touch feedback to be enabled)</string>
 
     <!-- Customization category -->
     <string name="customization_category_title">Customization</string>
