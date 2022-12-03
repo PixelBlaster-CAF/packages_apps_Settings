@@ -19,6 +19,19 @@
             android:summaryOff="@string/summary_heads_up_disabled"
             android:defaultValue="true" />
 
+    <com.blaster.support.preference.SystemSettingSwitchPreference
+        android:key="reticker_status"
+        android:defaultValue="false"
+        android:title="@string/reticker_title"
+        android:summary="@string/reticker_summary" />
+
+    <com.blaster.support.preference.SystemSettingSwitchPreference
+        android:key="reticker_colored"
+        android:defaultValue="false"
+        android:title="@string/reticker_colored_title"
+        android:summary="@string/reticker_colored_summary"
+        android:dependency="reticker_status" />
+
     <ListPreference
         android:key="heads_up_time_out"
         android:title="@string/heads_up_time_out_title"
