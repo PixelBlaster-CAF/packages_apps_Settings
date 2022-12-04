@@ -39,6 +39,12 @@
         android:summary="@string/new_reticker_summary"
         android:defaultValue="false" />
 
+    <com.blaster.support.preference.SystemSettingSwitchPreference
+        android:dependency="reticker_status"
+        android:key="new_reticker_animation"
+        android:title="@string/new_reticker_animation_title"
+        android:defaultValue="false" />
+
     <ListPreference
         android:key="heads_up_time_out"
         android:title="@string/heads_up_time_out_title"
