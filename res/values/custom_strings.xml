@@ -610,4 +610,8 @@
     <string name="new_reticker_title">New animated reTicker style</string>
     <string name="new_reticker_summary">A Re-designed Material design based dynamic island style animated notifications</string>
     <string name="new_reticker_animation_title">OneUI style reticker animation</string>
+
+    <!-- Scroll fling haptic feedback-->
+    <string name="scroll_fling_haptic_feedback_title">Vibrate on scroll flings</string>
+    <string name="scroll_fling_haptic_feedback_summary">Vibrate on reaching edges when scrolling with fling gesture</string>
 </resources>
