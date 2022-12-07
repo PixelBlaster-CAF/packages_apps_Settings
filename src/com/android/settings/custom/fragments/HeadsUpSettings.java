@@ -38,10 +38,12 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.custom.CustomUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 import com.blaster.support.preference.PackageListAdapter;
 import com.blaster.support.preference.PackageListAdapter.PackageItem;
+import com.blaster.support.preference.SystemSettingSwitchPreference;
 import android.provider.Settings;
 
 import java.util.ArrayList;
@@ -56,6 +58,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private static final int DIALOG_BLACKLIST_APPS = 1;
     private static final String PREF_HEADS_UP_TIME_OUT = "heads_up_time_out";
     private static final String PREF_HEADS_UP_SNOOZE_TIME = "heads_up_snooze_time";
+    private static final String PREF_RETICKER_STATUS = "reticker_status";
+    private static final String PREF_RETICKER_COLORED = "reticker_colored";
+    private static final String PREF_NEW_RETICKER = "new_reticker";
+    private static final String PREF_NEW_RETICKER_ANIMATION = "new_reticker_animation";
+
 
     private PackageListAdapter mPackageAdapter;
     private PackageManager mPackageManager;
@@ -65,6 +72,11 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
     private Preference mAddBlacklistPref;
     private ListPreference mHeadsUpTimeOut;
     private ListPreference mHeadsUpSnoozeTime;
+
+    private SystemSettingSwitchPreference mRetickerStatus;
+    private SystemSettingSwitchPreference mRetickerColored;
+    private SystemSettingSwitchPreference mNewReticker;
+    private SystemSettingSwitchPreference mNewRetickerAnimation;
 
     private String mStoplistPackageList;
     private String mBlacklistPackageList;
@@ -93,6 +105,16 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
 
         mAddStoplistPref.setOnPreferenceClickListener(this);
         mAddBlacklistPref.setOnPreferenceClickListener(this);
+
+        mRetickerStatus = (SystemSettingSwitchPreference) findPreference(PREF_RETICKER_STATUS);
+        mRetickerColored = (SystemSettingSwitchPreference) findPreference(PREF_RETICKER_COLORED);
+        mNewReticker = (SystemSettingSwitchPreference) findPreference(PREF_NEW_RETICKER);
+        mNewRetickerAnimation = (SystemSettingSwitchPreference) findPreference(PREF_NEW_RETICKER_ANIMATION);
+
+        mRetickerStatus.setOnPreferenceChangeListener(this);
+        mRetickerColored.setOnPreferenceChangeListener(this);
+        mNewReticker.setOnPreferenceChangeListener(this);
+        mNewRetickerAnimation.setOnPreferenceChangeListener(this);
 
         Resources systemUiResources;
         try {
@@ -135,6 +157,18 @@ public class HeadsUpSettings extends SettingsPreferenceFragment
                     Settings.System.HEADS_UP_NOTIFICATION_SNOOZE,
                     headsUpSnooze);
             updateHeadsUpSnoozeTimeSummary(headsUpSnooze);
+            return true;
+        } else if (preference == mRetickerStatus) {
+            CustomUtils.showSystemUiRestartDialog(getActivity());
+            return true;
+        } else if (preference == mRetickerColored) {
+            CustomUtils.showSystemUiRestartDialog(getActivity());
+            return true;
+        } else if (preference == mNewReticker) {
+            CustomUtils.showSystemUiRestartDialog(getActivity());
+            return true;
+        } else if (preference == mNewRetickerAnimation) {
+            CustomUtils.showSystemUiRestartDialog(getActivity());
             return true;
         }
         return false;

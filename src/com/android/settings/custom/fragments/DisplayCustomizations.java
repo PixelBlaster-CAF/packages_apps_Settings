@@ -31,12 +31,15 @@ import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.SwitchPreference;
 
 import com.android.internal.logging.nano.MetricsProto;
+import com.android.internal.util.custom.CustomUtils;
 
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
 
+import com.blaster.support.preference.OverlaySwitchPreference;
 import com.blaster.support.preference.SecureSettingMasterSwitchPreference;
 import com.blaster.support.preference.SystemSettingMasterSwitchPreference;
+import com.blaster.support.preference.SystemSettingSwitchPreference;
 
 public class DisplayCustomizations extends SettingsPreferenceFragment
         implements Preference.OnPreferenceChangeListener {
@@ -45,9 +48,13 @@ public class DisplayCustomizations extends SettingsPreferenceFragment
     private static final String BRIGHTNESS_SLIDER = "qs_show_brightness";
     private static final String KEY_BATTERY_CHARGING_LIGHT = "battery_charging_light";
     private static final String KEY_NETWORK_TRAFFIC = "network_traffic_state";
+    private static final String KEY_OLD_MOBILETYPE = "use_old_mobiletype";
+    private static final String KEY_COMBINED_ICONS = "com.android.systemui.flags.no_combined_icons";
 
     private SecureSettingMasterSwitchPreference mBrightnessSlider;
     private SystemSettingMasterSwitchPreference mNetworkTraffic;
+    private SystemSettingSwitchPreference mOldMobileType;
+    private OverlaySwitchPreference mCombinedIcons;
     Preference mBatteryLightPref;
 
     @Override
@@ -79,6 +86,14 @@ public class DisplayCustomizations extends SettingsPreferenceFragment
                 KEY_NETWORK_TRAFFIC, 0, UserHandle.USER_CURRENT) == 1;
         mNetworkTraffic.setChecked(enabled);
         mNetworkTraffic.setOnPreferenceChangeListener(this);
+
+        mOldMobileType = (SystemSettingSwitchPreference)
+                findPreference(KEY_OLD_MOBILETYPE);
+        mOldMobileType.setOnPreferenceChangeListener(this);
+
+        mCombinedIcons = (OverlaySwitchPreference)
+                findPreference(KEY_COMBINED_ICONS);
+        mCombinedIcons.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -93,6 +108,12 @@ public class DisplayCustomizations extends SettingsPreferenceFragment
             boolean value = (Boolean) newValue;
             Settings.System.putIntForUser(resolver, KEY_NETWORK_TRAFFIC,
                     value ? 1 : 0, UserHandle.USER_CURRENT);
+            return true;
+        } else if (preference == mOldMobileType) {
+            CustomUtils.showSystemUiRestartDialog(getActivity());
+            return true;
+        } else if (preference == mCombinedIcons) {
+            CustomUtils.showSystemUiRestartDialog(getActivity());
             return true;
         }
         return false;
