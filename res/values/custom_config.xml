@@ -26,7 +26,4 @@
     <string name="config_batteryHealthNode"></string>
     <string name="config_batteryRemainingCapacityNode"></string>
     <string name="config_batteryDesignCapacityNode"></string>
-
-    <!-- Whether to show peak refresh rate in display settings -->
-    <bool name="config_show_peak_refresh_rate_switch">false</bool>
 </resources>
